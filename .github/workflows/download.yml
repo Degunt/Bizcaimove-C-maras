@@ -1,0 +1,45 @@
+name: Descargar imágenes Bizkaimove
+
+on:
+  schedule:
+    # Ejecutar cada hora entre 7 y 17 UTC (8 a 18 hora de España aprox)
+    - cron: "0 7-17 * * *"
+  workflow_dispatch: {}  # Permite lanzarlo manualmente
+
+permissions:
+  contents: write  # Permitir subir cambios al repo (git push)
+
+jobs:
+  download:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: true  # permite usar GITHUB_TOKEN para subir cambios
+
+      - name: Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Instalar dependencias
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Ejecutar script de descarga
+        run: |
+          python Fotos_Bizkaimove.py
+
+      - name: Guardar imágenes en el repositorio
+        env:
+          GIT_COMMITTER_NAME: github-actions
+          GIT_COMMITTER_EMAIL: actions@github.com
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add imagenes || true
+          git commit -m "Nuevas imágenes $(date -u '+%Y-%m-%d %H:%M UTC')" || echo "Sin cambios que guardar"
+          git push origin HEAD:main || echo "No se pudo subir (ya actualizado)"
