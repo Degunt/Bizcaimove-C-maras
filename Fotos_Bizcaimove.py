@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Fri Oct 24 16:15:58 2025
 
@@ -61,5 +60,6 @@ for nombre, cam_id in camaras.items():
         print(f"✅ Guardada: {ruta_archivo}")
     except Exception as e:
         print(f"❌ Error al descargar {nombre}: {e}")
+
 
 print("\nDescarga completada con éxito ✅")
