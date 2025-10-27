@@ -24,7 +24,7 @@ camaras = {
     "Larrabetxu": 75,
     "Asua": 52,
     "Cadagua": 232,
-    "Abadino": 93,
+    "Abadino": 403,
     "Artea": 41
 }
 
@@ -63,3 +63,4 @@ for nombre, cam_id in camaras.items():
 
 
 print("\nDescarga completada con éxito ✅")
+
