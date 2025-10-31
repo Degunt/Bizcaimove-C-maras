@@ -1,5 +1,6 @@
+# -*- coding: utf-8 -*-
 """
-Created on Fri Oct 24 16:15:58 2025
+Created on Fri Oct 31 19:11:58 2025
 
 @author: deben
 """
@@ -18,14 +19,26 @@ carpeta_base = os.path.join(os.getcwd(), "imagenes")
 
 # Diccionario con las cámaras y sus identificadores (IDs de Bizkaimove)
 camaras = {
-    "Zaramillo": 80,
-    "LaArena": 85,
+    "Deusto": 50,
+    "LaArena": 30,
     "Erletxe": 87,
     "Larrabetxu": 75,
     "Asua": 52,
-    "Cadagua": 232,
-    "Abadino": 403,
-    "Artea": 41
+    "Aeropuerto": 33,
+    "Abadino": 93,
+    "Cruces": 11,
+    "Miraflores 1": 19,
+    "El Gallo": 86,
+    "Miraflores 2": 20,
+    "Zamudio": 73,
+    "Larrabetzu": 74,
+    "Larrondo": 97,
+    "Ermua": 96,
+    "Euba": 91,
+    "Entrada Montorra": 90,
+    "Salida Gernika":89,
+    "Boroa": 88,
+    "Enlace de Elorrio":413
 }
 
 # ==============================
@@ -61,6 +74,9 @@ for nombre, cam_id in camaras.items():
     except Exception as e:
         print(f"❌ Error al descargar {nombre}: {e}")
 
+print("\nDescarga completada con éxito ✅")
+
 
 print("\nDescarga completada con éxito ✅")
+
 
