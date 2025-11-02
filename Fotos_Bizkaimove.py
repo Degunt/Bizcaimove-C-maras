@@ -25,7 +25,7 @@ camaras = {
     "Larrabetxu": 75,
     "Asua": 52,
     "Aeropuerto": 33,
-    "Abadino": 93,
+    "Abadino": 403,
     "Cruces": 11,
     "Miraflores 1": 19,
     "El Gallo": 86,
@@ -78,5 +78,6 @@ print("\nDescarga completada con éxito ✅")
 
 
 print("\nDescarga completada con éxito ✅")
+
 
 
