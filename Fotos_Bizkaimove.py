@@ -23,8 +23,6 @@ camaras = {
     "LaArena": 30,
     "Erletxe": 87,
     "Larrabetxu": 75,
-    "Asua": 52,
-    "Aeropuerto": 33,
     "Abadino": 403,
     "Cruces": 11,
     "Miraflores 1": 19,
@@ -78,6 +76,7 @@ print("\nDescarga completada con éxito ✅")
 
 
 print("\nDescarga completada con éxito ✅")
+
 
 
 
